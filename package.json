@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "mocha __tests__/renderer.spec.js",
-    "build": "browserify index.js | uglifyjs > ./public/bundle.min.js && browserify ./src/renderer.js | uglifyjs > ./src/renderer.min.js",
+    "build": "browserify index.js | uglifyjs -c > ./public/bundle.min.js && browserify ./src/renderer.js | uglifyjs -c > ./src/renderer.min.js",
     "server": "http-server ./public"
   },
   "repository": {
