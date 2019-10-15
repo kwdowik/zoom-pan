@@ -1,0 +1,28 @@
+{
+  "name": "renderer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.1"
+  },
+  "scripts": {
+    "test": "mocha __tests__/renderer.spec.js",
+    "build": "browserify index.js | uglifyjs > ./public/bundle.min.js && browserify ./src/renderer.js | uglifyjs > ./src/renderer.min.js",
+    "server": "http-server ./public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwdowik/zoom-pan.git"
+  },
+  "author": "Kacper Wdowik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kwdowik/zoom-pan/issues"
+  },
+  "homepage": "https://github.com/kwdowik/zoom-pan#readme"
+}

@@ -1,0 +1,12 @@
+.area {
+    background-color: navajowhite;
+    height: 80%;
+    width: 80%;
+    position: absolute;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
