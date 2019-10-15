@@ -31,12 +31,12 @@ const canPan = (state) => ({
 });
 
 const canZoom = (state) => ({
-    zoom: ({ mouseX, mouseY, deltaScale }) => {
+    zoom: ({ x, y, deltaScale }) => {
         const { left, top } = state.element.getBoundingClientRect();
         const { minScale, maxScale, scaleSensitivity } = state;
         const [scale, newScale] = getScale({ scale: state.transformation.scale, deltaScale, minScale, maxScale, scaleSensitivity });
-        const originX = mouseX - left;
-        const originY = mouseY - top;
+        const originX = x - left;
+        const originY = y - top;
         const newOriginX = originX / scale;
         const newOriginY = originY / scale;
         const translate = getTranslate({ scale, minScale, maxScale });

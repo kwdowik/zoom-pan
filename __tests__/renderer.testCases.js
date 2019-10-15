@@ -111,10 +111,10 @@ const zoomTestCases = [
             top: 100,
             left: 50,
         },
-        mousePositions: [
+        positions: [
             {
-                mouseX: 150,
-                mouseY: 200,
+                x: 150,
+                y: 200,
                 deltaScale: 1,
             }
         ],
@@ -131,15 +131,15 @@ const zoomTestCases = [
             top: -500,
             left: 0,
         },
-        mousePositions: [
+        positions: [
             {
-                mouseX: 750,
-                mouseY: 1200,
+                x: 750,
+                y: 1200,
                 deltaScale: -15,
             },
             {
-                mouseX: -250,
-                mouseY: -100,
+                x: -250,
+                y: -100,
                 deltaScale: 40,
             },
         ],
@@ -156,25 +156,25 @@ const zoomTestCases = [
             top: -500,
             left: 0,
         },
-        mousePositions: [
+        positions: [
             {
-                mouseX: 750,
-                mouseY: 1200,
+                x: 750,
+                y: 1200,
                 deltaScale: 25,
             },
             {
-                mouseX: 750,
-                mouseY: 1200,
+                x: 750,
+                y: 1200,
                 deltaScale: 40,
             },
             {
-                mouseX: 800,
-                mouseY: 1300,
+                x: 800,
+                y: 1300,
                 deltaScale: 20,
             },
             {
-                mouseX: 800,
-                mouseY: 1300,
+                x: 800,
+                y: 1300,
                 deltaScale: 25,
             },
         ],

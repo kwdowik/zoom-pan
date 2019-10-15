@@ -10,8 +10,8 @@
         event.preventDefault();
         instance.zoom({
             deltaScale: event.deltaY,
-            mouseX: event.pageX,
-            mouseY: event.pageY
+            x: event.pageX,
+            y: event.pageY
         });
     });
     container.addEventListener("dblclick", () => {

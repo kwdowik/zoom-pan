@@ -35,11 +35,11 @@ describe('renderer', () => {
     });
     describe('#canZoom()', () => {
         describe('#zoom()', () => {
-            zoomTestCases.forEach(({ description, mousePositions, minScale, maxScale, rect, results }) =>
+            zoomTestCases.forEach(({ description, positions, minScale, maxScale, rect, results }) =>
                 it(description, () => {
                     const newElement = { ..._element, getBoundingClientRect: () => rect };
                     const instance = renderer({ minScale, maxScale, element: newElement });
-                    mousePositions.forEach(({ mouseX, mouseY, deltaScale }) => instance.zoom({ mouseX, mouseY, deltaScale }))
+                    positions.forEach(({ x, y, deltaScale }) => instance.zoom({ x, y, deltaScale }))
                     assert.equal(_element.style.transform, results[0]);
                     assert.equal(_element.style.transformOrigin, results[1]);
                 }),
