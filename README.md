@@ -15,10 +15,22 @@ npm install -g browserify
 npm install -g uglify-es
 ```
 
+### Build
+
+```
+npm run build
+```
+
 ### Installing
 
 ```
 npm install
+```
+
+### Run
+
+```
+npm run server
 ```
 
 ## Running the tests
