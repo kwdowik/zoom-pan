@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1",
     "http-server": "^0.11.1"
   },
   "devDependencies": {

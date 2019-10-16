@@ -63,7 +63,7 @@ const renderer = ({ minScale, maxScale, element, scaleSensitivity = 100 }) => {
             scale: 1
         },
     };
-    return Object.assign(state, canZoom(state), canPan(state));
+    return Object.assign({}, canZoom(state), canPan(state));
 };
 
 module.exports = { renderer };
