@@ -31,9 +31,4 @@
             originY: event.movementY
         });
     })
-    return () => {
-        container.removeEventListener("wheel");
-        container.removeEventListener("mousemove");
-        container.removeEventListener("dbclick");
-    }
 })();
