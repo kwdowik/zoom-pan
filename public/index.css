@@ -31,14 +31,6 @@ body {
     position: relative;
 }
 
-.triangle {
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 150px solid navajowhite;
-    position: relative;
-    float: right;
-}
-
 .text-area {
     float: right;
     position: relative;
