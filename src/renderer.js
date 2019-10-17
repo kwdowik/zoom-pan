@@ -1,4 +1,4 @@
-const hasPositionChanged = ({ pos, prevPos }) => Math.abs(pos - prevPos) > 1;
+const hasPositionChanged = ({ pos, prevPos }) => pos !== prevPos;
 
 const valueInRange = ({ minScale, maxScale, scale }) => scale <= maxScale && scale >= minScale;
 
@@ -49,7 +49,7 @@ const canZoom = (state) => ({
     }
 });
 
-const renderer = ({ minScale, maxScale, element, scaleSensitivity = 100 }) => {
+const renderer = ({ minScale, maxScale, element, scaleSensitivity = 1000 }) => {
     const state = {
         element,
         minScale,

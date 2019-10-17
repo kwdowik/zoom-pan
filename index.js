@@ -22,7 +22,7 @@
         });
     });
     container.addEventListener("mousemove", (event) => {
-        if (!event.ctrlKey) {
+        if (!event.shiftKey) {
             return;
         }
         event.preventDefault();
