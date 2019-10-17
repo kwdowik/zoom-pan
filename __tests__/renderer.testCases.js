@@ -104,7 +104,7 @@ const panToTestCases = [
 
 const zoomTestCases = [
     {
-        description: 'should zoom to x: 100, y: 100 and scale: 1.01',
+        description: 'should zoom to x: 100, y: 100 and scale: 1.1',
         minScale: .1,
         maxScale: 20,
         rect: {
@@ -119,12 +119,12 @@ const zoomTestCases = [
             }
         ],
         results: [
-            'matrix(1.01, 0, 0, 1.01, 0, 0)',
+            'matrix(1.1, 0, 0, 1.1, 0, 0)',
             '100px 100px'
         ],
     },
     {
-        description: 'should zoom to x: -294.11764705882354, y: 470.5882352941177 and scale: 1.19',
+        description: 'should zoom to x: -2500, y: 4000px and scale: 0.5',
         minScale: .1,
         maxScale: 20,
         rect: {
@@ -144,12 +144,12 @@ const zoomTestCases = [
             },
         ],
         results: [
-            'matrix(1.19, 0, 0, 1.19, 156.61764705882356, 184.4117647058824)',
-            '-294.11764705882354px 470.5882352941177px'
+            'matrix(0.5, 0, 0, 0.5, 2925, -2070)',
+            '-2500px 4000px'
         ],
     },
     {
-        description: 'should zoom to x: 380.95238095238096px, y: 857.1428571428571px and scale: 2.625',
+        description: 'should zoom to x: 40px, y: 90px and scale: 20',
         minScale: .1,
         maxScale: 20,
         rect: {
@@ -179,8 +179,8 @@ const zoomTestCases = [
             },
         ],
         results: [
-            'matrix(2.625, 0, 0, 2.625, -190.95238095238102, -437.1428571428574)',
-            '380.95238095238096px 857.1428571428571px'
+            'matrix(20, 0, 0, 20, -2890, -6561.428571428572)',
+            '40px 90px'
         ],
     },
 ]
