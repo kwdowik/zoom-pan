@@ -9,7 +9,7 @@
         }
         event.preventDefault();
         instance.zoom({
-            deltaScale: event.deltaY,
+            deltaScale: Math.sign(event.deltaY) > 0 ? 1 : -1,
             x: event.pageX,
             y: event.pageY
         });

@@ -49,7 +49,7 @@ const canZoom = (state) => ({
     }
 });
 
-const renderer = ({ minScale, maxScale, element, scaleSensitivity = 1000 }) => {
+const renderer = ({ minScale, maxScale, element, scaleSensitivity = 10 }) => {
     const state = {
         element,
         minScale,
