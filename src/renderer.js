@@ -7,13 +7,13 @@ const getTranslate = ({ minScale, maxScale, scale }) => ({ pos, prevPos, transla
         ? translate + (pos - prevPos * scale) * (1 - 1 / scale)
         : translate;
 
-const getMatrix = ({ scale, translateX, translateY }) => `matrix(${scale}, 0, 0, ${scale}, ${translateX}, ${translateY})`;
-
 const getScale = ({ scale, minScale, maxScale, scaleSensitivity, deltaScale }) => {
     let newScale = scale + (deltaScale / (scaleSensitivity / scale));
     newScale = Math.max(minScale, Math.min(newScale, maxScale));
     return [scale, newScale];
 };
+
+const getMatrix = ({ scale, translateX, translateY }) => `matrix(${scale}, 0, 0, ${scale}, ${translateX}, ${translateY})`;
 
 const pan = ({ state, originX, originY }) => {
     state.transformation.translateX += originX;
