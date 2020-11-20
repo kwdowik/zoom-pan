@@ -22,7 +22,7 @@ const pan = ({ state, originX, originY }) => {
         getMatrix({ scale: state.transformation.scale, translateX: state.transformation.translateX, translateY: state.transformation.translateY });
 };
 
-const canPan = (state) => ({
+const makePan = (state) => ({
     panBy: ({ originX, originY }) => pan({ state, originX, originY }),
     panTo: ({ originX, originY, scale }) => {
         state.transformation.scale = scale;
@@ -30,11 +30,11 @@ const canPan = (state) => ({
     },
 });
 
-const canZoom = (state) => ({
+const makeZoom = (state) => ({
     zoom: ({ x, y, deltaScale }) => {
         const { left, top } = state.element.getBoundingClientRect();
         const { minScale, maxScale, scaleSensitivity } = state;
-        const [scale, newScale] = getScale({ scale: state.transformation.scale, deltaScale, minScale, maxScale, scaleSensitivity });
+        const [ scale, newScale ] = getScale({ scale: state.transformation.scale, deltaScale, minScale, maxScale, scaleSensitivity });
         const originX = x - left;
         const originY = y - top;
         const newOriginX = originX / scale;
@@ -63,7 +63,7 @@ const renderer = ({ minScale, maxScale, element, scaleSensitivity = 10 }) => {
             scale: 1
         },
     };
-    return Object.assign({}, canZoom(state), canPan(state));
+    return Object.assign({}, makeZoom(state), makePan(state));
 };
 
 module.exports = { renderer };
