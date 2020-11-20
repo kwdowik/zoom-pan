@@ -2,16 +2,21 @@
   "name": "zoom-pan",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.main.js",
   "dependencies": {
     "http-server": "^0.11.1"
   },
   "devDependencies": {
     "mocha": "^6.2.1"
   },
+  "keywords": [
+    "javascript",
+    "zoom",
+    "pan"
+  ],
   "scripts": {
     "test": "mocha __tests__/renderer.spec.js",
-    "build": "browserify index.js | uglifyjs -c > ./public/bundle.min.js && browserify ./src/renderer.js | uglifyjs -c > ./src/renderer.min.js",
+    "build": "browserify index.js | uglifyjs -c -m -o index.min.js && browserify main.js | uglifyjs -c -m -o ./public/bundle.min.js",
     "server": "http-server ./public"
   },
   "repository": {

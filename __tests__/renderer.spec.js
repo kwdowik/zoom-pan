@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { renderer } = require('../src/renderer');
+const { renderer } = require('../index');
 const { panByTestCases, panToTestCases, zoomTestCases } = require('./renderer.testCases');
 
 describe('renderer', () => {
